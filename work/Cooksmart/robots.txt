@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: http://readymag.com/sitemap.xml
