@@ -339,10 +339,10 @@ below the screen.*/
   transition-timing-function: cubic-bezier(.64,.25,.89,.71);
 }
 .skw-page__heading {
-  margin-left: 5%;
+  /*margin-left: 5%;*/
   padding-left: 15%;
   font-family: 'Abril+Fatface';
-  margin-bottom: 10%;
+  /*margin-bottom: 10%; */
   font-size: 40px;
   color: #262626;
   text-align: left;
