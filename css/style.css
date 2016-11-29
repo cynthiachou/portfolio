@@ -36,7 +36,10 @@ aside.sidebar {
   border: 0.2px solid rgba(151, 151, 151, .5);
   left: 0;
   transition: 3s;
-  transform: rotate(-180deg);
+  /*transform: rotate(-180deg);*/
+    -webkit-transform: rotate(-180deg);  
+      -ms-transform: rotate(-180deg);  
+          transform: rotate(-180deg); 
   overflow: hidden;
 
 }
@@ -50,9 +53,14 @@ aside.sidebar:hover {
   list-style-type: none;
   line-height: 50px;
   font-family: 'Dosis-Light', sans-serif, Helvetica;
-  font-size: 12pt;
+  font-size: 1vw;
   color: #979797;
-  writing-mode: vertical-lr;
+  /*-webkit-writing-mode: vertical-lr;*/
+  -ms-writing-mode: tb-rl; 
+-webkit-writing-mode: vertical-rl;
+-moz-writing-mode: vertical-rl;
+-ms-writing-mode: vertical-rl;
+writing-mode: vertical-rl;
 }
 .sidebar-about {
   padding: 30% 0;
@@ -96,7 +104,7 @@ aside.sidebar:hover {
 .aboutme {
   font-family: 'Dosis';
   font-weight: 100;
-  font-size: 12pt;
+  font-size: 1vw;
   color: #C3C3C3;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -121,7 +129,7 @@ aside.sidebar:hover {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   transition-timing-function: cubic-bezier(.31, .84, .45, .99);
-    background: url(img/aboutme.png) repeat center center fixed;
+      background: url(img/aboutme.png) repeat center center fixed;
   background-size: cover;
   /*background: #110F1A;*/
   /* For browsers that do not support gradients */
@@ -224,6 +232,9 @@ aside.sidebar:hover {
   clear: both;
   width: 100%;
 }
+.p-spacing {
+  height: 0.5em;
+}
 .name-icon{
       position: absolute;
     height: 8vw;
@@ -231,9 +242,6 @@ aside.sidebar:hover {
     right: 8%;
     top: 5%;
     /* float: right; */
-}
-.p-spacing {
-  height: 0.5em;
 }
 
 /*for content page*/
@@ -349,15 +357,14 @@ below the screen.*/
   transition-timing-function: cubic-bezier(.64,.25,.89,.71);
 }
 .skw-page__heading {
-  /*margin-left: 5%;*/
-  padding-left: 10%;
+  margin-left: 5%;
+  padding-left: 15%;
   font-family: 'Abril+Fatface';
-  /*margin-bottom: 10%; */
+  margin-bottom: 10%;
   font-size: 40px;
   color: #262626;
   text-align: left;
   width: 100%;
-  display: inline-block;
 }
 .skw-page__heading:hover{
   color:grey;
@@ -399,30 +406,26 @@ below the screen.*/
   width: 100%;
 }
 .project__subtitle {
-  /*margin-left: 3vw;*/
-  padding-left: 3vw;
+  margin-left: 5%;
+  padding-left: 15%;
   font-family: 'Abril+Fatface';
   margin-bottom: 10%;
-  font-size: 18pt;
+  font-size: 1.2vw;
   color: #FFFFFF;
   text-align: left;
   width: 100%;
-  display: inline-block;
-/*  position: relative;
-  left: 0;*/
 }
 .project__heading a {
   /*margin-left: 5%;*/
-  /*padding-left: 10%;*/
+  /*padding-left: 15%;*/
   font-family: 'Abril+Fatface';
   /*margin-bottom: 10%;*/
-  font-size: 30pt;
+  font-size: 3.5vw;
   color: white;
   text-align: left;
   width: 100%;
   transition: 0.5s;
   text-decoration: none;
-  display: inline-block;
 
 }
 @media (-webkit-min-device-pixel-ratio:0) {
@@ -524,7 +527,7 @@ below the screen.*/
   background-size: cover;
 }
 .skw-page-9 .skw-page__half .skw-page__content {
-  background: url(img/showreel.png) repeat center center fixed;
+  background: url(img/img/showreel.png) repeat center center fixed;
   background-size: cover;
 }
 
@@ -565,7 +568,7 @@ section.navbar {
   position: relative;
   width:50%;
   height: 5%;
-  border-top: 20pt solid #FB1C9F;
+  border-top: 1vw solid #FB1C9F;
   margin-top:auto;
   margin-bottom: auto;
   padding: 20% 10% 20% 10%;
@@ -579,7 +582,7 @@ section.navbar {
   padding: 0% 10% 0% 10%;
 }*/
 .navbar .navbar-item:hover {
-  border-top: 10pt solid white;
+  border-top: 0.5vw solid white;
 }
 
 .navbar .navbar-item.jqactive {
@@ -589,5 +592,5 @@ section.navbar {
 /*  -webkit-transform: translateX(0.5em);
   transform: translateX(0.5em);*/
   transition: 0.5s;
-  border-top: 10pt solid #FB301C;
+  border-top: 0.5vw solid #FB301C;
 }
