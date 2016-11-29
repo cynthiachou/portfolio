@@ -347,6 +347,7 @@ below the screen.*/
   color: #262626;
   text-align: left;
   width: 100%;
+  display: inline-block;
 }
 .skw-page__heading:hover{
   color:grey;
@@ -388,20 +389,23 @@ below the screen.*/
   width: 100%;
 }
 .project__subtitle {
-  margin-left: 5%;
-  padding-left: 15%;
+  /*margin-left: 3vw;*/
+  padding-left: 3vw;
   font-family: 'Abril+Fatface';
   margin-bottom: 10%;
   font-size: 1.2vw;
   color: #FFFFFF;
   text-align: left;
   width: 100%;
+  display: inline-block;
+/*  position: relative;
+  left: 0;*/
 }
 .project__heading a {
-  /*margin-left: 5%;*/
+  margin-left: 5%;
   padding-left: 15%;
   font-family: 'Abril+Fatface';
-  /*margin-bottom: 10%;*/
+  margin-bottom: 10%;
   font-size: 3vw;
   color: white;
   text-align: left;
