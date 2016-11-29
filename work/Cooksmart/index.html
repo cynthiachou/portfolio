@@ -87,7 +87,7 @@
 
 	
 
-	<script type="text/javascript" src="/config.js"></script>		
+	<!-- <script type="text/javascript" src="/config.js"></script>		 -->
 
 	
 
@@ -96,23 +96,23 @@
 
 			
 
-			RM.common.isDomainViewer = true;
-			RM.common.customDomainProfile = window.ServerData.mags.domainForUser
+			// RM.common.isDomainViewer = true;
+			// RM.common.customDomainProfile = window.ServerData.mags.domainForUser
 
-			RM.common.isDownloadedSource = true
+			// RM.common.isDownloadedSource = true
 
-			RM.common.embedMode = RM.utils.queryUrlGetParam('embedMode') == 'true';
-			RM.common.embedDomainName = RM.utils.queryUrlGetParam('embedDomainName') || '';
-			RM.common.embedDomainType = RM.utils.queryUrlGetParam('embedDomainType') || '';
+			// RM.common.embedMode = RM.utils.queryUrlGetParam('embedMode') == 'true';
+			// RM.common.embedDomainName = RM.utils.queryUrlGetParam('embedDomainName') || '';
+			// RM.common.embedDomainType = RM.utils.queryUrlGetParam('embedDomainType') || '';
 
-			RM.viewerRouter = new RM.classes.ViewerRouter;
-			// RM.analytics = new RM.classes.Analytics;
-			// RM.viewerRouter.analytics = RM.analytics;
+			// RM.viewerRouter = new RM.classes.ViewerRouter;
+			// // RM.analytics = new RM.classes.Analytics;
+			// // RM.viewerRouter.analytics = RM.analytics;
 
-			Backbone.history.universalStart({
-				pushState: !RM.constants.IS_FILE_PROTOCOL && (RM.config && RM.config.pushState || true),
-				root: (RM.config && RM.config.root || "/")
-			});
+			// Backbone.history.universalStart({
+			// 	pushState: !RM.constants.IS_FILE_PROTOCOL && (RM.config && RM.config.pushState || true),
+			// 	root: (RM.config && RM.config.root || "/")
+			// });
 			$(window).on('load', function() {
 				$('html').addClass('page-loaded')
 			 });
