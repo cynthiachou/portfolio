@@ -565,7 +565,7 @@ section.navbar {
   position: relative;
   width:50%;
   height: 5%;
-  border-top: 10pt solid #FB1C9F;
+  border-top: 20pt solid #FB1C9F;
   margin-top:auto;
   margin-bottom: auto;
   padding: 20% 10% 20% 10%;
@@ -579,7 +579,7 @@ section.navbar {
   padding: 0% 10% 0% 10%;
 }*/
 .navbar .navbar-item:hover {
-  border-top: 5pt solid white;
+  border-top: 10pt solid white;
 }
 
 .navbar .navbar-item.jqactive {
@@ -589,5 +589,5 @@ section.navbar {
 /*  -webkit-transform: translateX(0.5em);
   transform: translateX(0.5em);*/
   transition: 0.5s;
-  border-top: 5pt solid #FB301C;
+  border-top: 10pt solid #FB301C;
 }
