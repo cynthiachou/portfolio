@@ -1,0 +1,578 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: black;
+  height: 100%;
+  font-family: 'Abril Fatface', /*cursive, Helvetica, Arial, sans-serif*/
+  ;
+}
+
+/*for sidebar*/
+
+aside.sidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 50px;
+  z-index: 2;
+  border: 0.2px solid rgba(151, 151, 151, .5);
+  left: 0;
+  transition: 3s;
+  transform: rotate(-180deg);
+  overflow: hidden;
+
+}
+aside.sidebar:hover {
+  background-color: #110f1a;
+  color: white 0%;
+  border: 0.5px solid #fb1c9f;
+}
+.sidebar-text {
+  display: inline-block;
+  list-style-type: none;
+  line-height: 50px;
+  font-family: 'Dosis-Light', sans-serif, Helvetica;
+  font-size: 1vw;
+  color: #979797;
+  writing-mode: vertical-lr;
+}
+.sidebar-about {
+  padding: 30% 0;
+  transition: 0.5s;
+}
+.sidebar-email {
+  text-decoration: none;
+  color: #979797;
+  margin-top: 5em;
+  margin-bottom: 20em;
+  padding: 30% 0;
+  transition: 0.5s;
+}
+.sidebar-name {
+  padding: 30% 0;
+  transition: 0.5s;
+}
+
+/*sidebar hover effect*/
+
+.sidebar-about:hover {
+  cursor: pointer;
+  color: #fb301c;
+}
+.sidebar-email a:hover {
+  cursor: pointer;
+  color: #fb1c9f;
+}
+.sidebar-name:hover {
+  cursor: pointer;
+  color: #fb301c;
+}
+.sidebar-about.inactive {
+  cursor: pointer;
+  color: #fb301c;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  z-index: 0;
+}
+
+.aboutme {
+  font-family: 'Dosis';
+  font-weight: 100;
+  font-size: 1vw;
+  color: #C3C3C3;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  z-index: 1;
+  /*  opacity: 0;*/
+  /*tramsition effects*/
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  transition-timing-function: cubic-bezier(.31, .84, .45, .99);
+  background: #110F1A;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #110F1A, #201E29);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #110F1A, #201E29);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #110F1A, #201E29);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #110F1A, #201E29);
+  /* Standard syntax */
+}
+.aboutme.active {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  clear: both;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  z-index: 1;
+  /*tramsition effects*/
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-timing-function: cubic-bezier(.31, .84, .45, .99);
+}
+.aboutme-left {
+  display: inline;
+  float: left;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+}
+.aboutme-leftbox-up {
+  width: 100%;
+  height: 50%;
+}
+.aboutme-leftbox-down {
+  width: 100%;
+  height: 50%;
+  padding: 10% 7% 7% 7%;
+}
+.aboutme-right {
+  float: right;
+  display: inline;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+}
+.aboutme-rightbox-up {
+  width: 100%;
+  height: 50%;
+}
+.aboutme-rightbox-down {
+  width: 100%;
+  height: 50%;
+  padding: 7%;
+}
+.aboutme-subtitle {
+  padding: 5% 15% 30% 75px;
+  color: #C3C3C3;
+  opacity: 0.5;
+  font-size: 13px;
+}
+.aboutme-me {
+  padding-left: 3%;
+}
+.aboutme-link {
+  padding-left: 3.5%;
+}
+.aboutme-link a {
+  text-decoration: none;
+  padding-right: 3.5%;
+  color: white;
+}
+.aboutme-experience {
+  float: left;
+  width: 50%;
+}
+.aboutme-smalltitle {
+  font-size: 13px;
+  color: #676767;
+}
+.aboutme-education {
+  float: right;
+  width: 50%;
+}
+.aboutme-award {
+  clear: both;
+  width: 100%;
+}
+.p-spacing {
+  height: 0.5em;
+}
+
+/*for content page*/
+
+.skw-pages {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.skw-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*before the program run, every page is waiting 
+at translate3d(0,100%,0) which is just right down 
+below the screen.*/
+
+.skw-page__half {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  /*tramsition effects*/
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  transition-timing-function: cubic-bezier(.09, .69, .46, 1.07);
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  transition-timing-function: cubic-bezier(.09, .69, .46, 1.07);
+}
+
+/*when a page is active, it will change it position to (0,0,0).
+ So when begin the page 1 will be (0,0,0) and all the other 
+ pages will be (0,0,0). Scrolling down page 1 become inactive
+ (content layer opacity low, but does not move) and page 2 
+ becomes active move from (0,100%,0). Scrolling up page 1 
+ becomes active(have position 0,0,0 again) and page 2 becomes 
+ inactive(content opacity low, position0,100%,0)*/
+
+.skw-page.active .skw-page__half {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-timing-function: cubic-bezier(.09, .69, .46, 1.07);
+}
+
+/*when a page is inactive it stays at (0,0,0) and become transparent, the next page will cover it*/
+
+.skw-page.inactive .skw-page__content {
+  opacity: 0.1;
+}
+
+
+
+.skw-page__skewed {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #110F1A;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #110F1A, #201E29);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #110F1A, #201E29);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #110F1A, #201E29);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #110F1A, #201E29);
+  /* Standard syntax */
+}
+.skw-page__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  -webkit-transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: opacity 1.5s, -webkit-transform 1.5s;
+  transition: transform 1.5s, opacity 1.5s;
+  transition: transform 1.5s, opacity 1.5s, -webkit-transform 1.5s;
+  background-size: cover;
+  transition-timing-function: cubic-bezier(.64,.25,.89,.71);
+}
+.skw-page__half .skw-page__content {
+  padding-left: 6%;
+  padding-right: 30%;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  transition-timing-function: cubic-bezier(.64,.25,.89,.71);
+}
+.skw-page__heading {
+  margin-left: 5%;
+  padding-left: 15%;
+  font-family: 'Abril+Fatface';
+  margin-bottom: 10%;
+  font-size: 40px;
+  color: #262626;
+  text-align: left;
+  width: 100%;
+}
+.skw-page__heading:hover{
+  color:grey;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+.skw-page__heading {
+    background-color: grey;
+    background-image: -webkit-linear-gradient(left, #FB301C 0%, #FB1C9F 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+.skw-page__heading:hover{
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+.skw-page__description {
+  /*margin-top: 10%*/
+  margin-left: 5%;
+  padding-left: 15%;
+  font-weight: lighter;
+  text-align: left;
+  font-size: 24px;
+  color: #7C7C7C;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.skw-page__note {
+  margin-left: 5%;
+  padding-left: 15%;
+  font-size: 1vw;
+  color: #7C7C7C;
+  font-style: italic;
+  text-align: left;
+  width: 100%;
+}
+.project__subtitle {
+  margin-left: 5%;
+  padding-left: 15%;
+  font-family: 'Abril+Fatface';
+  margin-bottom: 10%;
+  font-size: 1.2vw;
+  color: #FFFFFF;
+  text-align: left;
+  width: 100%;
+}
+.project__heading a {
+  /*margin-left: 5%;*/
+  /*padding-left: 15%;*/
+  font-family: 'Abril+Fatface';
+  /*margin-bottom: 10%;*/
+  font-size: 3.5vw;
+  color: white;
+  text-align: left;
+  width: 100%;
+  transition: 0.5s;
+  text-decoration: none;
+
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+.project__heading a{
+    background-color: white;
+    background-image: -webkit-linear-gradient(left, #FB301C 0%, #FB1C9F 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .7s .1s;
+    -webkit-background-clip: text;
+    text-decoration: none;
+  }
+.project__heading a:hover{
+    background-position: 0 0;
+    color: transparent;
+    transition: .7s 0;
+    text-decoration: none;
+  }
+}
+.project__description {
+  /*margin-top: 10%*/
+  margin-left: 5%;
+  padding-left: 15%;
+  font-weight: lighter;
+  text-align: left;
+  font-size: 1.3vw;
+  color: #D8D8D8;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.project__details {
+  display: inline;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 5%;
+  padding-left: 15%;
+  font-size: 1.2vw;
+  color: #7C7C7C;
+  text-align: left;
+  width: 100%;
+  color: white 50%;
+  letter-spacing: 1.5px;
+}
+.project__link {
+  display: inline;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  color: #7C7C7C;
+  text-align: left;
+  width: 100%;
+  color: white 50%;
+  letter-spacing: 1.5px;
+  transition: 1s;
+}
+.project__link:hover {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  color: #7C7C7C;
+  text-align: left;
+  width: 100%;
+  color: white;
+  letter-spacing: 2px;
+}
+.skw-page-1 .skw-page__half .skw-page__content {
+  background: white;
+}
+
+.skw-page-2 .skw-page__half .skw-page__content {
+  /*background: #292929;*/
+  background: url(img/cooksmart_project_bg.jpg) repeat center center fixed;
+  background-size: cover;
+}
+
+.skw-page-3 .skw-page__half .skw-page__content {
+  background: url(img/gather_project_bg.png) repeat center center fixed;
+  background-size: cover;
+}
+
+.skw-page-4 .skw-page__half .skw-page__content {
+  background: url(img/zero_ui_project_bg.png) repeat center center fixed;
+  background-size: cover;
+}
+
+.skw-page-5 .skw-page__half .skw-page__content {
+  background: url(img/it_speaks_project_bg.jpg) repeat center center fixed;
+  background-size: cover;
+}
+.skw-page-6 .skw-page__half .skw-page__content {
+  background: url(img/the_city_of_others_project_bg.JPG) repeat center center fixed;
+  background-size: cover;
+}
+.skw-page-7 .skw-page__half .skw-page__content {
+  background: url(img/love_circuit_project_bg.jpeg) repeat center center fixed;
+  background-size: cover;
+}
+.skw-page-8 .skw-page__half .skw-page__content {
+  background: url(img/dawn_project_bg.jpg) repeat center center fixed;
+  background-size: cover;
+}
+.skw-page-9 .skw-page__half .skw-page__content {
+  background: url(img/gather_project_bg.png) repeat center center fixed;
+  background-size: cover;
+}
+
+
+section.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 50px;
+  z-index: 2;
+  right: 0.5em;
+  transition: 3s;
+  padding-top:5%;
+  padding-bottom: 5%; 
+}
+.navbar-content{
+  width: 100%;
+    margin-top:auto;
+  margin-bottom: auto;
+}
+
+.navbar .navbar-item {
+  position: relative;
+  width:50%;
+  height: 5%;
+  border-top: 1vw solid #FB1C9F;
+  margin-top:auto;
+  margin-bottom: auto;
+  padding: 20% 10% 20% 10%;
+  transition: 0.5s;
+  opacity: 1;
+}
+/*.navbar .navbar-item .padding{
+  padding: 40% 10% 40% 10%;
+}
+.navbar .navbar-item .navbar-firstpage {
+  padding: 0% 10% 0% 10%;
+}*/
+.navbar .navbar-item:hover {
+  border-top: 0.5vw solid white;
+}
+
+.navbar .navbar-item.jqactive {
+  opacity: 1;
+  -webkit-transform: scale3d(1.5,1,1);
+  transform: scale3d(1.5,1,1);
+/*  -webkit-transform: translateX(0.5em);
+  transform: translateX(0.5em);*/
+  transition: 0.5s;
+  border-top: 0.5vw solid #FB301C;
+}
