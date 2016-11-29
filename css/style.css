@@ -96,7 +96,7 @@ aside.sidebar:hover {
 .aboutme {
   font-family: 'Dosis';
   font-weight: 100;
-  font-size: 1vw;
+  font-size: 12pt;
   color: #C3C3C3;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -399,10 +399,10 @@ below the screen.*/
 }
 .project__heading a {
   /*margin-left: 5%;*/
-  /*padding-left: 15%;*/
+  padding-left: 15%;
   font-family: 'Abril+Fatface';
   /*margin-bottom: 10%;*/
-  font-size: 3.5vw;
+  font-size: 3vw;
   color: white;
   text-align: left;
   width: 100%;
