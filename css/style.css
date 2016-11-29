@@ -402,16 +402,17 @@ below the screen.*/
   left: 0;*/
 }
 .project__heading a {
-  margin-left: 5%;
+  /*margin-left: 5%;*/
   padding-left: 15%;
   font-family: 'Abril+Fatface';
-  margin-bottom: 10%;
+  /*margin-bottom: 10%;*/
   font-size: 3vw;
   color: white;
   text-align: left;
   width: 100%;
   transition: 0.5s;
   text-decoration: none;
+  display: inline-block;
 
 }
 @media (-webkit-min-device-pixel-ratio:0) {
@@ -513,7 +514,7 @@ below the screen.*/
   background-size: cover;
 }
 .skw-page-9 .skw-page__half .skw-page__content {
-  background: url(img/gather_project_bg.png) repeat center center fixed;
+  background: url(img/showreel.png) repeat center center fixed;
   background-size: cover;
 }
 
