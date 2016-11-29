@@ -121,15 +121,17 @@ aside.sidebar:hover {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   transition-timing-function: cubic-bezier(.31, .84, .45, .99);
-  background: #110F1A;
+    background: url(img/aboutme.png) repeat center center fixed;
+  background-size: cover;
+  /*background: #110F1A;*/
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #110F1A, #201E29);
+  /*background: -webkit-linear-gradient(left, #110F1A, #201E29);*/
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #110F1A, #201E29);
+  /*background: -o-linear-gradient(right, #110F1A, #201E29);*/
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #110F1A, #201E29);
+  /*background: -moz-linear-gradient(right, #110F1A, #201E29);*/
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #110F1A, #201E29);
+  /*background: linear-gradient(to right, #110F1A, #201E29);*/
   /* Standard syntax */
 }
 .aboutme.active {
@@ -221,6 +223,14 @@ aside.sidebar:hover {
 .aboutme-award {
   clear: both;
   width: 100%;
+}
+.name-icon{
+      position: absolute;
+    height: 8vw;
+    /* width: 25%; */
+    right: 8%;
+    top: 5%;
+    /* float: right; */
 }
 .p-spacing {
   height: 0.5em;
@@ -340,7 +350,7 @@ below the screen.*/
 }
 .skw-page__heading {
   /*margin-left: 5%;*/
-  padding-left: 15%;
+  padding-left: 10%;
   font-family: 'Abril+Fatface';
   /*margin-bottom: 10%; */
   font-size: 40px;
@@ -403,7 +413,7 @@ below the screen.*/
 }
 .project__heading a {
   /*margin-left: 5%;*/
-  padding-left: 15%;
+  /*padding-left: 10%;*/
   font-family: 'Abril+Fatface';
   /*margin-bottom: 10%;*/
   font-size: 3vw;
