@@ -50,7 +50,7 @@ aside.sidebar:hover {
   list-style-type: none;
   line-height: 50px;
   font-family: 'Dosis-Light', sans-serif, Helvetica;
-  font-size: 1vw;
+  font-size: 12pt;
   color: #979797;
   writing-mode: vertical-lr;
 }
@@ -403,7 +403,7 @@ below the screen.*/
   padding-left: 3vw;
   font-family: 'Abril+Fatface';
   margin-bottom: 10%;
-  font-size: 1.2vw;
+  font-size: 18pt;
   color: #FFFFFF;
   text-align: left;
   width: 100%;
@@ -416,7 +416,7 @@ below the screen.*/
   /*padding-left: 10%;*/
   font-family: 'Abril+Fatface';
   /*margin-bottom: 10%;*/
-  font-size: 3vw;
+  font-size: 30pt;
   color: white;
   text-align: left;
   width: 100%;
@@ -565,7 +565,7 @@ section.navbar {
   position: relative;
   width:50%;
   height: 5%;
-  border-top: 1vw solid #FB1C9F;
+  border-top: 10pt solid #FB1C9F;
   margin-top:auto;
   margin-bottom: auto;
   padding: 20% 10% 20% 10%;
@@ -579,7 +579,7 @@ section.navbar {
   padding: 0% 10% 0% 10%;
 }*/
 .navbar .navbar-item:hover {
-  border-top: 0.5vw solid white;
+  border-top: 5pt solid white;
 }
 
 .navbar .navbar-item.jqactive {
@@ -589,5 +589,5 @@ section.navbar {
 /*  -webkit-transform: translateX(0.5em);
   transform: translateX(0.5em);*/
   transition: 0.5s;
-  border-top: 0.5vw solid #FB301C;
+  border-top: 5pt solid #FB301C;
 }
