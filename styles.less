@@ -1,0 +1,51 @@
+@whiteFont: #EFF2E7;
+@yellowFont: #FFD705;
+@likeBlack: #2E2D36;
+@likeGrey: #7D7774;
+@font-face {
+  font-family: "SimplonMono";
+  src: url("SimplonMono-Regular-WebTrial.ttf");
+}
+
+.universalFont {
+  font-family: 'SimplonMono', sans-serif;
+  font-size: 12pt;
+  position: relative;
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: @whiteFont;
+}
+
+.mainPage {
+  background-color: @likeBlack;
+  padding: 100pt;
+  .universalFont();
+}
+
+.intro {
+  color: @likeGrey;
+  font-size: 10pt;
+}
+
+.linkFont {
+  color: @yellowFont;
+  text-decoration: none;
+}
+
+.linkFont:hover {
+  text-decoration: line-through;
+}
+/* this is the fance hovering effet that we might be using later
+p{
+    background-image: -webkit-linear-gradient(left, #FB301C 0%, #FB1C9F 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+}
+p:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .2s 0;
+} */
